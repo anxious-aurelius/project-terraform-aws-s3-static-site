@@ -4,7 +4,7 @@ locals {
 
 resource "aws_s3_bucket" "static_site" {
   bucket = "${local.bucket_name}-site"
-  tags = var.default_tags
+  tags   = var.default_tags
 }
 
 resource "aws_s3_object" "web_files" {
