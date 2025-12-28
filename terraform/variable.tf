@@ -48,3 +48,13 @@ variable "cloudfront_price_class" {
   type        = string
   default     = "PriceClass_100"
 }
+
+variable "access_key" {
+  description = "AWS access key"
+  sensitive   = true
+}
+
+variable "secret_key" {
+  description = "AWS secret access key"
+  sensitive   = true
+}
