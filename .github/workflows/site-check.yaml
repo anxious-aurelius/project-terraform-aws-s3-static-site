@@ -1,0 +1,17 @@
+name: Site Checks
+
+on:
+  pull_request:
+    paths:
+      - "site/**"
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: List site files
+        run: ls -R site
