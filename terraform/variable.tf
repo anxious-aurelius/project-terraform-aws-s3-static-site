@@ -26,7 +26,7 @@ variable "default_tags" {
 variable "static_file_directory" {
   description = "Directory with website content"
   type        = string
-  default     = "./www"
+  default     = "../site"
 }
 
 variable "static_file_type_dictionary" {

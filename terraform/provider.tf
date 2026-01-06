@@ -5,6 +5,13 @@ terraform {
       version = "~> 6.0"
     }
   }
+  backend "s3" {
+    bucket = "terraform-project-kripal"
+    key   = "terraform/state/terraform-aws-s3-static-site/terraform.tfstate"
+    use_lockfile = true
+    encrypt = true
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
